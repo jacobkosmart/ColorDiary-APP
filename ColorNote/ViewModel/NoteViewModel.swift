@@ -15,8 +15,10 @@ class NoteViewModel: ObservableObject {
 	@Published var date = Date()
 	@Published var searchText: String = ""
 	@Published var savedDaiary: [DairyEntity] = []
+	@Published var updateItem: DairyEntity!
 	
 	let container: NSPersistentContainer
+	let columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 1)
 	
 	
 	init () {
@@ -92,6 +94,24 @@ class NoteViewModel: ObservableObject {
 	}
 	
 	func addDairy(context: NSManagedObjectContext) {
+		
+		if updateItem != nil {
+			// Update Old Data..
+			updateItem.date = date
+			updateItem.content = content
+			
+			try! context.save()
+			
+			// remove updatingItem if successful
+			updateItem = nil
+			isNewData.toggle()
+			content = ""
+			date = Date()
+			return
+		}
+		
+		
+		// Add New Data
 		let newDairy = DairyEntity(context: context)
 		newDairy.content = content
 		newDairy.date = date
@@ -101,10 +121,13 @@ class NoteViewModel: ObservableObject {
 			try context.save()
 			fetchDairy()
 			content = ""
+			date = Date()
 			isNewData.toggle()
 		} catch let error {
 			print("ERROR ADDDAIRY \(error)")
 		}
+		
+		
 	}
 	
 	
@@ -113,6 +136,13 @@ class NoteViewModel: ObservableObject {
 		container.viewContext.delete(entity)
 		saveData()
 		
+	}
+	
+	func updateDiary(index: Int) {
+		updateItem = savedDaiary[index]
+		content = updateItem.content!
+		date = updateItem.date!
+		isNewData.toggle()
 	}
 	
 	func saveData() {

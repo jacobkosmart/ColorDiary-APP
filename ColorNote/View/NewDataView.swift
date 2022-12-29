@@ -14,11 +14,24 @@ struct NewDataView: View {
 	
     var body: some View {
 		VStack {
-			HStack {
-				Text("Add New Diary")
+			HStack { 
+				Text("\(vm.updateItem == nil ? "Add New" : "Update") Diary")
 					.font(.largeTitle)
 					.fontWeight(.heavy)
 					.foregroundColor(.black)
+					.hCenter()
+					
+				Button {
+					if vm.updateItem == nil {
+						vm.isNewData.toggle()
+					} else {
+						vm.addDairy(context: context)
+					}
+				} label: {
+					Image(systemName: "xmark")
+						.foregroundColor(.black)
+						.font(.title)
+				}
 			} //: HSTACK
 			.padding()
 			
@@ -70,7 +83,7 @@ struct NewDataView: View {
 			} label: {
 				Label {
 					// title
-					Text("Add Now")
+					Text(vm.updateItem == nil ? "Add Now" : "Update")
 						.font(.title)
 						.foregroundColor(.white)
 						.fontWeight(.bold)

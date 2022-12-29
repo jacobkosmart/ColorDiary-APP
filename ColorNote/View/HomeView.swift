@@ -48,8 +48,6 @@ struct HomeView: View {
 							.font(.title.bold())
 							.hLeading()
 						
-						
-						
 						// AddButton
 						Button {
 							// action
@@ -73,12 +71,14 @@ struct HomeView: View {
 					}  //: HSTACK
 				} //: VSTACK
 				.padding(.top, 5)
-				//				.frame(maxWidth: .infinity, alignment: .leading)
 				
-				// Columns...
-				let columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 1)
 				
-				LazyVGrid(columns: columns, spacing: 25) {
+				// search 에 내용이 없을때
+				
+				
+				
+				
+				LazyVGrid(columns: vm.columns, spacing: 25) {
 					// Color Notes
 					ForEach(Array(vm.savedDaiary.enumerated()), id: \.element) { index, diary in
 						
@@ -109,6 +109,7 @@ struct HomeView: View {
 								// Edit Button
 								Button {
 									// action
+									vm.updateDiary(index: index)
 								} label: {
 									ButtonLabel(name: "pencil", backgroundColor: Color.black)
 										.font(.system(size: 15))
