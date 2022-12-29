@@ -22,6 +22,7 @@
 		8188A4C1295CA4A400DA2D94 /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A4C0295CA4A400DA2D94 /* ButtonLabel.swift */; };
 		8188A4C3295CA8F800DA2D94 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A4C2295CA8F800DA2D94 /* NoteViewModel.swift */; };
 		8188A4C5295CAA6E00DA2D94 /* NewDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A4C4295CAA6E00DA2D94 /* NewDataView.swift */; };
+		8193A2B7295DBD6B00487FDB /* CardDairy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193A2B6295DBD6B00487FDB /* CardDairy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		8188A4C0295CA4A400DA2D94 /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		8188A4C2295CA8F800DA2D94 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		8188A4C4295CAA6E00DA2D94 /* NewDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDataView.swift; sourceTree = "<group>"; };
+		8193A2B6295DBD6B00487FDB /* CardDairy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDairy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				8188A4C0295CA4A400DA2D94 /* ButtonLabel.swift */,
 				81508A61295D5D4B00098B58 /* DateButton.swift */,
+				8193A2B6295DBD6B00487FDB /* CardDairy.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				8188A4B9295C968000DA2D94 /* NoteModel.swift in Sources */,
 				8188A4B5295C8F6100DA2D94 /* ViewExtention.swift in Sources */,
 				8188A4B2295C8E9B00DA2D94 /* HomeView.swift in Sources */,
+				8193A2B7295DBD6B00487FDB /* CardDairy.swift in Sources */,
 				81508A65295D9D3D00098B58 /* DairyContainer.xcdatamodeld in Sources */,
 				8188A4A7295C8CBC00DA2D94 /* ColorNote.xcdatamodeld in Sources */,
 				8188A4C5295CAA6E00DA2D94 /* NewDataView.swift in Sources */,

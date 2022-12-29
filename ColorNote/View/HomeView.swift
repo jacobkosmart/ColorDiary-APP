@@ -10,12 +10,8 @@ import CoreData
 
 struct HomeView: View {
 	
-	
 	// property
 	@ObservedObject var vm: NoteViewModel
-	
-//	// Fetching Data..
-//	@FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)], animation: .spring()) var results: FetchedResults<Task>
 	
 	var body: some View {
 		VStack (spacing: 15) {
@@ -74,10 +70,7 @@ struct HomeView: View {
 								.font(.body)
 						}
 						
-						
-						
-						
-					}
+					}  //: HSTACK
 				} //: VSTACK
 				.padding(.top, 5)
 				//				.frame(maxWidth: .infinity, alignment: .leading)
@@ -87,7 +80,7 @@ struct HomeView: View {
 				
 				LazyVGrid(columns: columns, spacing: 25) {
 					// Color Notes
-					ForEach(vm.savedDaiary) {diary in
+					ForEach(Array(vm.savedDaiary.enumerated()), id: \.element) { index, diary in
 						
 						VStack {
 							Text(diary.content ?? "")
@@ -105,11 +98,14 @@ struct HomeView: View {
 								// Delete Button
 								Button {
 									// action
+									withAnimation(Animation.easeInOut) {
+										vm.deleteDiary(index: index)
+									}
 								} label: {
 									ButtonLabel(name: "trash", backgroundColor: Color.red)
 										.font(.system(size: 15))
 								}
-
+								
 								// Edit Button
 								Button {
 									// action
@@ -123,7 +119,7 @@ struct HomeView: View {
 						.padding()
 						.background(Color.gray)
 						.cornerRadius(10)
-					
+						
 					} //: LOOP
 				}  //: GRID
 				.padding(.top, 10)

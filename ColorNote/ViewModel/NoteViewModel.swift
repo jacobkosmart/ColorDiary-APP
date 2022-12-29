@@ -100,10 +100,29 @@ class NoteViewModel: ObservableObject {
 		do {
 			try context.save()
 			fetchDairy()
+			content = ""
 			isNewData.toggle()
 		} catch let error {
 			print("ERROR ADDDAIRY \(error)")
 		}
 	}
+	
+	
+	func deleteDiary(index: Int) {
+		let entity = savedDaiary[index]
+		container.viewContext.delete(entity)
+		saveData()
+		
+	}
+	
+	func saveData() {
+		do {
+			try container.viewContext.save()
+			fetchDairy()
+		} catch   let error {
+			print("ERROR SavedData \(error)")
+		}
+	}
+
 	
 }

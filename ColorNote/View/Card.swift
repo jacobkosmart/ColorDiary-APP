@@ -27,8 +27,7 @@ struct Card: View {
 					.opacity(0.8)
 					.hLeading()
 				
-				
-				
+
 				// Delete Button
 				Button {
 					// action
