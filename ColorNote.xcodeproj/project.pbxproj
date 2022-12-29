@@ -13,6 +13,13 @@
 		8188A4A2295C8CBC00DA2D94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8188A4A1295C8CBC00DA2D94 /* Preview Assets.xcassets */; };
 		8188A4A4295C8CBC00DA2D94 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A4A3295C8CBC00DA2D94 /* Persistence.swift */; };
 		8188A4A7295C8CBC00DA2D94 /* ColorNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8188A4A5295C8CBC00DA2D94 /* ColorNote.xcdatamodeld */; };
+		8188A4B2295C8E9B00DA2D94 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A4B1295C8E9B00DA2D94 /* HomeView.swift */; };
+		8188A4B5295C8F6100DA2D94 /* ViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A4B4295C8F6100DA2D94 /* ViewExtention.swift */; };
+		8188A4B9295C968000DA2D94 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A4B8295C968000DA2D94 /* NoteModel.swift */; };
+		8188A4BD295CA0BC00DA2D94 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A4BC295CA0BC00DA2D94 /* Card.swift */; };
+		8188A4C1295CA4A400DA2D94 /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A4C0295CA4A400DA2D94 /* ButtonLabel.swift */; };
+		8188A4C3295CA8F800DA2D94 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A4C2295CA8F800DA2D94 /* NoteViewModel.swift */; };
+		8188A4C5295CAA6E00DA2D94 /* NewDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A4C4295CAA6E00DA2D94 /* NewDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		8188A4A1295C8CBC00DA2D94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8188A4A3295C8CBC00DA2D94 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8188A4A6295C8CBC00DA2D94 /* ColorNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ColorNote.xcdatamodel; sourceTree = "<group>"; };
+		8188A4B1295C8E9B00DA2D94 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8188A4B4295C8F6100DA2D94 /* ViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtention.swift; sourceTree = "<group>"; };
+		8188A4B8295C968000DA2D94 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		8188A4BC295CA0BC00DA2D94 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		8188A4C0295CA4A400DA2D94 /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
+		8188A4C2295CA8F800DA2D94 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		8188A4C4295CAA6E00DA2D94 /* NewDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +69,11 @@
 		8188A499295C8CBB00DA2D94 /* ColorNote */ = {
 			isa = PBXGroup;
 			children = (
-				8188A49A295C8CBB00DA2D94 /* ColorNoteApp.swift */,
-				8188A49C295C8CBB00DA2D94 /* ContentView.swift */,
+				8188A4AD295C8E5B00DA2D94 /* APP */,
+				8188A4B7295C967400DA2D94 /* Model */,
+				8188A4B6295C966400DA2D94 /* ViewModel */,
+				8188A4AE295C8E6800DA2D94 /* View */,
+				8188A4B3295C8F4800DA2D94 /* Extention */,
 				8188A49E295C8CBC00DA2D94 /* Assets.xcassets */,
 				8188A4A3295C8CBC00DA2D94 /* Persistence.swift */,
 				8188A4A5295C8CBC00DA2D94 /* ColorNote.xcdatamodeld */,
@@ -71,6 +88,50 @@
 				8188A4A1295C8CBC00DA2D94 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8188A4AD295C8E5B00DA2D94 /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				8188A49A295C8CBB00DA2D94 /* ColorNoteApp.swift */,
+				8188A49C295C8CBB00DA2D94 /* ContentView.swift */,
+			);
+			path = APP;
+			sourceTree = "<group>";
+		};
+		8188A4AE295C8E6800DA2D94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8188A4B1295C8E9B00DA2D94 /* HomeView.swift */,
+				8188A4C0295CA4A400DA2D94 /* ButtonLabel.swift */,
+				8188A4BC295CA0BC00DA2D94 /* Card.swift */,
+				8188A4C4295CAA6E00DA2D94 /* NewDataView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8188A4B3295C8F4800DA2D94 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				8188A4B4295C8F6100DA2D94 /* ViewExtention.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		8188A4B6295C966400DA2D94 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8188A4C2295CA8F800DA2D94 /* NoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8188A4B7295C967400DA2D94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8188A4B8295C968000DA2D94 /* NoteModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +204,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8188A4C3295CA8F800DA2D94 /* NoteViewModel.swift in Sources */,
+				8188A4C1295CA4A400DA2D94 /* ButtonLabel.swift in Sources */,
 				8188A4A4295C8CBC00DA2D94 /* Persistence.swift in Sources */,
 				8188A49D295C8CBB00DA2D94 /* ContentView.swift in Sources */,
 				8188A49B295C8CBB00DA2D94 /* ColorNoteApp.swift in Sources */,
+				8188A4B9295C968000DA2D94 /* NoteModel.swift in Sources */,
+				8188A4B5295C8F6100DA2D94 /* ViewExtention.swift in Sources */,
+				8188A4B2295C8E9B00DA2D94 /* HomeView.swift in Sources */,
 				8188A4A7295C8CBC00DA2D94 /* ColorNote.xcdatamodeld in Sources */,
+				8188A4C5295CAA6E00DA2D94 /* NewDataView.swift in Sources */,
+				8188A4BD295CA0BC00DA2D94 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
