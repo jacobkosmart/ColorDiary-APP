@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81508A62295D5D4B00098B58 /* DateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81508A61295D5D4B00098B58 /* DateButton.swift */; };
 		8188A49B295C8CBB00DA2D94 /* ColorNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A49A295C8CBB00DA2D94 /* ColorNoteApp.swift */; };
 		8188A49D295C8CBB00DA2D94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A49C295C8CBB00DA2D94 /* ContentView.swift */; };
 		8188A49F295C8CBC00DA2D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8188A49E295C8CBC00DA2D94 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81508A61295D5D4B00098B58 /* DateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateButton.swift; sourceTree = "<group>"; };
 		8188A497295C8CBB00DA2D94 /* ColorNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8188A49A295C8CBB00DA2D94 /* ColorNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorNoteApp.swift; sourceTree = "<group>"; };
 		8188A49C295C8CBB00DA2D94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81508A60295D5D3800098B58 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8188A4C0295CA4A400DA2D94 /* ButtonLabel.swift */,
+				81508A61295D5D4B00098B58 /* DateButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		8188A48E295C8CBB00DA2D94 = {
 			isa = PBXGroup;
 			children = (
@@ -102,8 +113,8 @@
 		8188A4AE295C8E6800DA2D94 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				81508A60295D5D3800098B58 /* Components */,
 				8188A4B1295C8E9B00DA2D94 /* HomeView.swift */,
-				8188A4C0295CA4A400DA2D94 /* ButtonLabel.swift */,
 				8188A4BC295CA0BC00DA2D94 /* Card.swift */,
 				8188A4C4295CAA6E00DA2D94 /* NewDataView.swift */,
 			);
@@ -209,6 +220,7 @@
 				8188A4A4295C8CBC00DA2D94 /* Persistence.swift in Sources */,
 				8188A49D295C8CBB00DA2D94 /* ContentView.swift in Sources */,
 				8188A49B295C8CBB00DA2D94 /* ColorNoteApp.swift in Sources */,
+				81508A62295D5D4B00098B58 /* DateButton.swift in Sources */,
 				8188A4B9295C968000DA2D94 /* NoteModel.swift in Sources */,
 				8188A4B5295C8F6100DA2D94 /* ViewExtention.swift in Sources */,
 				8188A4B2295C8E9B00DA2D94 /* HomeView.swift in Sources */,

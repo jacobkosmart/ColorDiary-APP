@@ -18,14 +18,15 @@ struct Card: View {
 			Text(note.note)
 				.font(.body)
 				.multilineTextAlignment(.leading)
-				.frame(maxWidth: .infinity, alignment: .leading)
+				.hLeading()
 			
 			HStack (spacing: 20) {
 				Text(note.date, style: .date)
 					.foregroundColor(.black)
 					.opacity(0.8)
+					.hLeading()
 				
-				Spacer()
+				
 				
 				// Delete Button
 				Button {

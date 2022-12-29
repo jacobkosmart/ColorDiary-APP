@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-	// 나머지 UI 강의
-	 //https://youtu.be/gPqIE-nlxLA?t=278
+	
 	
 	
 	// property
@@ -25,15 +24,15 @@ struct HomeView: View {
 					.font(.title3)
 					.foregroundColor(.gray)
 				
-				TextField("Search", text: .constant(""))
+				TextField("Search", text: $vm.searchText)
 			} //: HSTACK
-			.frame(maxWidth: .infinity, alignment: .leading)
+//			.frame(maxWidth: .infinity, alignment: .leading)
 			.padding(.bottom, 10)
 			.padding(.horizontal, 25)
 			.overlay(
 				Rectangle()
 					.fill(Color.gray.opacity(0.1))
-					.frame(height: 1)
+					.frame(height: 2)
 					.padding(.horizontal, -25)
 					.offset(y: 6),
 				
@@ -49,8 +48,9 @@ struct HomeView: View {
 					HStack (spacing: 15) {
 						Text("My Color Diary")
 							.font(.title.bold())
+							.hLeading()
 						
-						Spacer()
+						
 						
 						// AddButton
 						Button {
@@ -78,7 +78,7 @@ struct HomeView: View {
 					}
 				} //: VSTACK
 				.padding(.top, 5)
-				.frame(maxWidth: .infinity, alignment: .leading)
+//				.frame(maxWidth: .infinity, alignment: .leading)
 				
 				// Columns...
 				let columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 1)
@@ -92,13 +92,13 @@ struct HomeView: View {
 						
 					} //: LOOP
 				}  //: GRID
-				.padding(.top, 3)
+				.padding(.top, 10)
 				
 				
 			} //: SCROLL
 			
 		} //: VSTACK
-		.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+//		.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 		.padding(.horizontal)
 		.preferredColorScheme(.light)
     }

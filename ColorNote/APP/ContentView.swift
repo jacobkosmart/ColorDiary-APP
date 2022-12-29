@@ -13,6 +13,11 @@ struct ContentView: View {
 	// property
 	@StateObject var vm = NoteViewModel()
 	
+	init() {
+		
+	}
+	
+	
 	var body: some View {
 		HomeView(vm: vm)
 	}

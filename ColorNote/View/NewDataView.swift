@@ -21,8 +21,23 @@ struct NewDataView: View {
 			} //: HSTACK
 			.padding()
 			
-			TextEditor(text: $vm.content)
-				.padding()
+			
+			// TextEditor Placeholder 만들기
+			
+			ZStack {
+				if vm.content.isEmpty {
+					TextEditor(text: $vm.placeHolderText)
+						.foregroundColor(.gray)
+						
+						.padding()
+				}  //: CONDITION
+				TextEditor(text: $vm.content)
+					.opacity(vm.content.isEmpty ? 0.25 : 1)
+					.padding()
+			} //: ZSTACK
+			
+			
+			
 			
 			Divider()
 				.padding(.horizontal)
@@ -32,11 +47,49 @@ struct NewDataView: View {
 					.font(.title)
 					.fontWeight(.bold)
 					.foregroundColor(.black)
-				
-				Spacer(minLength: 0)
+					.hLeading()
 			} //: HSTACK
-			Spacer(minLength: 0)
+			.padding(.horizontal)
+			.padding(.top)
+			
+			HStack (spacing: 10) {
+				DateButton(vm: vm, title: "Yesterday")
+				
+				DateButton(vm: vm, title: "Today")
+				
+				DatePicker("", selection: $vm.date, displayedComponents: .date)
+					.labelsHidden()
+			} //: HSTACK
+
+			
+			
+			// AddBtn
+			Button {
+				
+			} label: {
+				Label {
+					// title
+					Text("Add Now")
+						.font(.title)
+						.foregroundColor(.white)
+						.fontWeight(.bold)
+				} icon: {
+					Image(systemName: "plus")
+						.foregroundColor(.white)
+				}
+				.padding(.vertical)
+				.frame(width: CGFloat.screenWidth - 30)
+				.background(
+					LinearGradient(gradient: Gradient(colors: [Color("Green"), Color("Purple")]), startPoint: .leading, endPoint: .trailing)
+				)
+				.cornerRadius(10)
+
+			}
+			.padding()
+
+			
 		} //: VSTACK
+		.background(Color.black.opacity(0.05))
     }
 }
 
