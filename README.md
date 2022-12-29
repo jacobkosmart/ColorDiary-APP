@@ -18,7 +18,9 @@
 
 ### 🔷 Check core codes in details
 
-1.
+1. HomeView UI
+
+2. NewDateView UI
 
 ### 🔷 Version Log
 

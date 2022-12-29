@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct HomeView: View {
-	
 	
 	
 	// property
 	@ObservedObject var vm: NoteViewModel
 	
+//	// Fetching Data..
+//	@FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)], animation: .spring()) var results: FetchedResults<Task>
 	
-    var body: some View {
+	var body: some View {
 		VStack (spacing: 15) {
 			
 			// 1. Search Bar
@@ -26,7 +28,7 @@ struct HomeView: View {
 				
 				TextField("Search", text: $vm.searchText)
 			} //: HSTACK
-//			.frame(maxWidth: .infinity, alignment: .leading)
+			//			.frame(maxWidth: .infinity, alignment: .leading)
 			.padding(.bottom, 10)
 			.padding(.horizontal, 25)
 			.overlay(
@@ -71,25 +73,57 @@ struct HomeView: View {
 							ButtonLabel(name: "gear", backgroundColor: Color.black)
 								.font(.body)
 						}
-
-
+						
+						
 						
 						
 					}
 				} //: VSTACK
 				.padding(.top, 5)
-//				.frame(maxWidth: .infinity, alignment: .leading)
+				//				.frame(maxWidth: .infinity, alignment: .leading)
 				
 				// Columns...
 				let columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 1)
 				
 				LazyVGrid(columns: columns, spacing: 25) {
 					// Color Notes
-					ForEach(notes) {note in
+					ForEach(vm.savedDaiary) {diary in
 						
-						// CardView
-						Card(note: note)
-						
+						VStack {
+							Text(diary.content ?? "")
+								.font(.body)
+								.multilineTextAlignment(.leading)
+								.lineLimit(3)
+								.hLeading()
+							
+							HStack {
+								Text(diary.date ?? Date() , style: .date)
+									.foregroundColor(.black)
+									.opacity(0.8)
+									.hLeading()
+								
+								// Delete Button
+								Button {
+									// action
+								} label: {
+									ButtonLabel(name: "trash", backgroundColor: Color.red)
+										.font(.system(size: 15))
+								}
+
+								// Edit Button
+								Button {
+									// action
+								} label: {
+									ButtonLabel(name: "pencil", backgroundColor: Color.black)
+										.font(.system(size: 15))
+								}
+								
+							} //: HSTACK
+						} //: VSTACK
+						.padding()
+						.background(Color.gray)
+						.cornerRadius(10)
+					
 					} //: LOOP
 				}  //: GRID
 				.padding(.top, 10)
@@ -98,15 +132,15 @@ struct HomeView: View {
 			} //: SCROLL
 			
 		} //: VSTACK
-//		.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+		//		.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 		.padding(.horizontal)
 		.preferredColorScheme(.light)
-    }
+	}
 	
 	
 	// MARK: - VIEWBUILDER
 	
-
+	
 	
 	// Add Button Builder
 	@ViewBuilder
@@ -121,13 +155,13 @@ struct HomeView: View {
 				.background(Color.black)
 				.clipShape(Circle())
 		}
-
+		
 	}
 	
 }
 
 struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView(vm: NoteViewModel())
-    }
+	static var previews: some View {
+		HomeView(vm: NoteViewModel())
+	}
 }

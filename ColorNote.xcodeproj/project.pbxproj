@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81508A62295D5D4B00098B58 /* DateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81508A61295D5D4B00098B58 /* DateButton.swift */; };
+		81508A65295D9D3D00098B58 /* DairyContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81508A63295D9D3D00098B58 /* DairyContainer.xcdatamodeld */; };
 		8188A49B295C8CBB00DA2D94 /* ColorNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A49A295C8CBB00DA2D94 /* ColorNoteApp.swift */; };
 		8188A49D295C8CBB00DA2D94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188A49C295C8CBB00DA2D94 /* ContentView.swift */; };
 		8188A49F295C8CBC00DA2D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8188A49E295C8CBC00DA2D94 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		81508A61295D5D4B00098B58 /* DateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateButton.swift; sourceTree = "<group>"; };
+		81508A64295D9D3D00098B58 /* DairyContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DairyContainer.xcdatamodel; sourceTree = "<group>"; };
 		8188A497295C8CBB00DA2D94 /* ColorNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8188A49A295C8CBB00DA2D94 /* ColorNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorNoteApp.swift; sourceTree = "<group>"; };
 		8188A49C295C8CBB00DA2D94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				8188A49E295C8CBC00DA2D94 /* Assets.xcassets */,
 				8188A4A3295C8CBC00DA2D94 /* Persistence.swift */,
 				8188A4A5295C8CBC00DA2D94 /* ColorNote.xcdatamodeld */,
+				81508A63295D9D3D00098B58 /* DairyContainer.xcdatamodeld */,
 				8188A4A0295C8CBC00DA2D94 /* Preview Content */,
 			);
 			path = ColorNote;
@@ -224,6 +227,7 @@
 				8188A4B9295C968000DA2D94 /* NoteModel.swift in Sources */,
 				8188A4B5295C8F6100DA2D94 /* ViewExtention.swift in Sources */,
 				8188A4B2295C8E9B00DA2D94 /* HomeView.swift in Sources */,
+				81508A65295D9D3D00098B58 /* DairyContainer.xcdatamodeld in Sources */,
 				8188A4A7295C8CBC00DA2D94 /* ColorNote.xcdatamodeld in Sources */,
 				8188A4C5295CAA6E00DA2D94 /* NewDataView.swift in Sources */,
 				8188A4BD295CA0BC00DA2D94 /* Card.swift in Sources */,
@@ -429,6 +433,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		81508A63295D9D3D00098B58 /* DairyContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				81508A64295D9D3D00098B58 /* DairyContainer.xcdatamodel */,
+			);
+			currentVersion = 81508A64295D9D3D00098B58 /* DairyContainer.xcdatamodel */;
+			path = DairyContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		8188A4A5295C8CBC00DA2D94 /* ColorNote.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

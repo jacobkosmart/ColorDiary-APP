@@ -10,6 +10,7 @@ import SwiftUI
 struct NewDataView: View {
 	
 	@ObservedObject var vm: NoteViewModel
+	@Environment(\.managedObjectContext) var context
 	
     var body: some View {
 		VStack {
@@ -65,7 +66,7 @@ struct NewDataView: View {
 			
 			// AddBtn
 			Button {
-				
+				vm.addDairy(context: context)
 			} label: {
 				Label {
 					// title
@@ -86,6 +87,10 @@ struct NewDataView: View {
 
 			}
 			.padding()
+			
+			// disableing buttton when no data..
+			.disabled(vm.content == "" ? true : false)
+			.opacity(vm.content == "" ? 0.5 : 1)
 
 			
 		} //: VSTACK
